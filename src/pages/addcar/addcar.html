@@ -1,0 +1,42 @@
+<!--
+  Generated template for the AddcarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tambah Motor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Merk</ion-label>
+    <ion-input [(ngModel)]="car.merk" placeholder="Misal Honda, Yamaha, Suzuki dll"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Model</ion-label>
+    <ion-input [(ngModel)]="car.model" placeholder="Misal beat, supra125, nmax , dll"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Nomor Plat</ion-label>
+    <ion-input [(ngModel)]="car.platno" placeholder="Misal AB245XY"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Harga Sewa</ion-label>
+    <ion-input [(ngModel)]="car.harga" placeholder="Harga sewa per 24 jam"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="chooseFile()">Pilih Gambar
+  </button>
+
+
+  <button ion-button block clear (click)="addCar(car)">Tambah</button>
+</ion-content>

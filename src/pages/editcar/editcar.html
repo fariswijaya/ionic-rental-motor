@@ -1,0 +1,40 @@
+<!--
+  Generated template for the EditcarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{car?.merk}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Merk</ion-label>
+    <ion-input [(ngModel)]="car.merk" placeholder="Misal Honda, Yamaha, Suzuki"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Model</ion-label>
+    <ion-input [(ngModel)]="car.model" placeholder="Misal beat, vario125, vario150, nmax dll"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Nomor Plat</ion-label>
+    <ion-input [(ngModel)]="car.platno" placeholder="Misal AB234XY"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Harga Sewa</ion-label>
+    <ion-input [(ngModel)]="car.harga" placeholder="Harga sewa per 24 jam"></ion-input>
+  </ion-item>
+
+  <button ion-button block clear (click)="updateCar(car)">Simpan</button>
+  <button ion-button block clear (click)="removeCar(car)">Hapus</button>
+</ion-content>

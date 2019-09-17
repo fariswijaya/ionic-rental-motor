@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Rental Motor
     </ion-title>
+
+    <ion-buttons end>
+      <button navPush="AddcarPage" ion-button>
+      Tambah</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-list>
+    <ion-list-header>
+      Daftar Motor
+    </ion-list-header>
+
+    <ion-item *ngFor="let car of carList | async"
+    detail-push navPush="EditcarPage" [navParams]="{car:car}">
+      <ion-thumbnail item-start>
+          <img src="https://firebasestorage.googleapis.com/v0/b/rental-motor-fd382.appspot.com/o/{{car.model}}.jpg?alt=media&token=a9558703-1267-41a1-a593-b6232bdb870d">
+      </ion-thumbnail>
+      <h3>{{car.merk}} {{car.model}}</h3>
+        <p>Rp.{{car.harga}} / 24 jam</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

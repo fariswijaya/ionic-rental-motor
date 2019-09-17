@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "default": "rental-motor-fd382",
+    "rentalmotornew": "rental-motor-fd382",
+    "rental": "rental-motor-fd382",
+    "motornew": "rental-motor-fd382",
+    "motorr": "rental-motor-fd382",
+    "www": "rental-motor-fd382"
+  }
+}
